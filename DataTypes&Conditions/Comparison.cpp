@@ -5,11 +5,11 @@ int main()
     int A, B;
     char S;
     cin >> A >> S >> B;
-    if (A < B)
+    if (A < B && S == '<')
         cout << "Right";
-    else if (A > B)
+    else if (A > B && S == '>')
         cout << "Right";
-    else if (A == B)
+    else if (A == B && S == '=')
         cout << "Right";
     else
         cout << "Wrong";
