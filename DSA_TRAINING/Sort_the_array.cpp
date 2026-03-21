@@ -26,7 +26,7 @@ int main()
             count++;
         }
     }
-    
+
      if(count == 0){
         cout << "yes" << endl
              << 1 << " " << 1;
@@ -96,13 +96,7 @@ int main()
         cout << "no";
 }
 
-    // int sortedArray[n];
-    // for (int i = 0; i < n; i++)
-    // {
-    //     sortedArray[i] = arr[i];
-    // }
-
-    // sort(sortedArray, sortedArray + n);
+   
 
     // int des_sortedArray[n];
     // for (int i = 0; i < n; i++)
