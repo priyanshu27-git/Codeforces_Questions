@@ -18,10 +18,10 @@ int main() {
     //     cout << str[i] << ' ';
     // }
     
-    string str = "Hello World";
-    // Erase 1 character starting at index 5 (the space)
-    str.erase(0, 1);
-    cout << str << endl; // Output: HelloWorld
-    
+    // string str = "Hello World";
+    // // Erase 1 character starting at index 5 (the space)
+    // str.erase(0, 1);
+    // cout << str << endl; // Output: HelloWorld
+    cout << 12 % 21;
     return 0;
 }
