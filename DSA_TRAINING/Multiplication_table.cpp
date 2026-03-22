@@ -15,36 +15,3 @@ int main()
         }
     }
     cout << count;
-
-    // long long arr[n][n];
-    // for (int i = 1; i <= n; i++)
-    // {
-    //     for (int j = 1; j <= n; j++)
-    //     {
-    //         arr[i - 1][j - 1] = i * j;
-    //     }
-    // }
-    // long long count = 0;
-    // int rows = n;
-    // int column = n;
-    // int r = 0;
-    // int c = column - 1;
-    // while (r < rows && c >= 0)
-    // {
-    //     if (arr[r][c] == x)
-    //     {
-    //         count++;
-    //         r++;
-    //     }
-    //     else if (arr[r][c] > x)
-    //     {
-    //         c--;
-    //     }
-    //     else
-    //     {
-    //         r++;
-    //     }
-    //     cout << " * ";
-    // }
-    // cout << count;
-}
