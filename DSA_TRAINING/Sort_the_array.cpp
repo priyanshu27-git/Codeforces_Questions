@@ -17,7 +17,7 @@ int main()
     {
         sortedArray[i] = arr[i];
     }
-    int count=0;
+    int count = 0;
     sort(sortedArray, sortedArray + n);
     for (long i = 0; i < n; i++)
     {
@@ -27,10 +27,11 @@ int main()
         }
     }
 
-     if(count == 0){
+    if (count == 0)
+    {
         cout << "yes" << endl
              << 1 << " " << 1;
-             return 0;
+        return 0;
     }
 
     int left = 0, right = 0;
@@ -55,98 +56,55 @@ int main()
                 check = true;
             }
         }
+
         else if (left > 0 && right < n - 1 && check)
         {
-            if (arr[first - 1] > arr[second - 2] && arr[second - 1] < arr[first]){
+
+            if (arr[first - 1] > arr[second - 2] && arr[second - 1] < arr[first])
+            {
                 right++;
                 segment++;
                 check = false;
             }
+            else
+                break;
         }
         else if (right < n - 1 && check)
         {
-            if (arr[second - 1] < arr[first + 1]){
+            if (arr[second - 1] < arr[first])
+            {
                 right++;
                 segment++;
                 check = false;
             }
+            else
+                break;
         }
         else if (left > 0 && check)
         {
-            if (arr[first - 1] > arr[second - 2]){
+            if (arr[first - 1] > arr[second - 2])
+            {
                 right++;
                 segment++;
                 check = false;
             }
+             else 
+                break;
         }
         else if (check && second - 1 < first - 1){
             right++;
             segment++;
             check = false;
         }
-        else 
+        else
             right++;
     }
 
-    if(segment == 1){
+    if (segment == 1)
+    {
         cout << "yes" << endl
              << second << " " << first;
     }
-    else 
+    else
         cout << "no";
 }
-
-   
-
-    // int des_sortedArray[n];
-    // for (int i = 0; i < n; i++)
-    // {
-    //     des_sortedArray[i] = arr[i];
-    // }
-    // sort(des_sortedArray, des_sortedArray + n, greater<int>());
-    // int count1=0;
-    // for (int i = 0; i < n; i++)
-    // {
-    //     if(des_sortedArray[i] != arr[i]){
-    //         break;
-    //     }
-    //     else
-    //         count1++;
-    // }
-    // if(count1 == n) {
-    //     cout << "yes" << endl
-    //          << 1 << " " << n;
-    //          return 0;
-    // }
-
-    // int count = 0, first = 0, second = 0;
-    // for (long i = 0; i < n; i++)
-    // {
-    //     if (arr[i] != sortedArray[i])
-    //     {
-    //         count++;
-    //         if (count == 1)
-    //         {
-    //             second = i;
-    //         }
-    //         else if (count == 2)
-    //         {
-    //             first = i;
-    //         }
-    //     }
-
-    //     if (count > 2)
-    //     {
-    //         cout << "no";
-    //         break;
-    //     }
-    // }
-    // if (count == 2)
-    // {
-    //     cout << "yes" << endl
-    //          << second+1 << " " << first+1;
-    // }
-    // else if(count == 0){
-    //     cout << "yes" << endl
-    //          << arr[first] << " " << arr[second];
-    // }
