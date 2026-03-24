@@ -88,10 +88,11 @@ int main()
                 segment++;
                 check = false;
             }
-             else 
+            else
                 break;
         }
-        else if (check && second - 1 < first - 1){
+        else if (check && second - 1 < first - 1)
+        {
             right++;
             segment++;
             check = false;
@@ -106,5 +107,7 @@ int main()
              << second << " " << first;
     }
     else
+    {
         cout << "no";
+    }
 }
