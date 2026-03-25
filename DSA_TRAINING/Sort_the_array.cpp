@@ -97,7 +97,8 @@ int main()
             segment++;
             check = false;
         }
-        else{
+        else
+        {
             right++;
         }
     }
