@@ -4,25 +4,7 @@
 #include <numeric>
 using namespace std;
 
-// long long type_one(long a[], long start, long end)
-// {
-//     long long ans = 0;
-//     for (long i = start; i <= end; i++)
-//     {
-//         ans += a[i];
-//     }
-//     return ans;
-// }
 
-// long long type_two(long a[], long start, long end)
-// {
-//     long long ans = 0;
-//     for (long i = start; i <= end; i++)
-//     {
-//         ans += a[i];
-//     }
-//     return ans;
-// }
 int main()
 {
     int n;
@@ -54,12 +36,10 @@ int main()
         long long ans = 0;
         if (type == 1)
         {
-            // ans = type_one(a, l - 1, r - 1);
             ans  = accumulate(a.begin() + (l-1) , a.begin() + (r-1) + 1 , 0LL);
         }
         else
         {
-            // ans = type_two(sorted_Array, l - 1, r - 1);
             ans  = accumulate(sorted_Array.begin() + (l-1) , sorted_Array.begin() + (r-1) + 1 , 0LL);
 
         }
