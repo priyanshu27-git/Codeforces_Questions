@@ -1,5 +1,7 @@
 #include <iostream>
 #include <algorithm>
+#include <vector>
+#include <numeric>
 using namespace std;
 
 // long long type_one(long a[], long start, long end)
@@ -25,23 +27,23 @@ int main()
 {
     int n;
     cin >> n;
-    long a[n];
+    vector<long> a(n);
     for (long i = 0; i < n; i++)
     {
         cin >> a[i];
     }
 
-    long sorted_Array[n];
+    vector<long> sorted_Array(n);
     for (long i = 0; i < n; i++)
     {
         sorted_Array[i] = a[i];
     }
 
-    sort(sorted_Array, sorted_Array + n);
+    sort(sorted_Array.begin() , sorted_Array.end());
 
     int m;
     cin >> m;
-    long long solu[m];
+    vector<long long> solu(m);
     long k = 0;
 
     for (long i = 0; i < m; i++)
@@ -50,16 +52,15 @@ int main()
         long l, r;
         cin >> type >> l >> r;
         long long ans = 0;
-        int start = l - 1, end = r - 1;
         if (type == 1)
         {
             // ans = type_one(a, l - 1, r - 1);
-            ans = abs(start - end) + 1 * a[start] + a[end] / 2;
+            ans  = accumulate(a.begin() + (l-1) , a.begin() + (r-1) + 1 , 0LL);
         }
         else
         {
             // ans = type_two(sorted_Array, l - 1, r - 1);
-            ans = (abs(start - end) + 1) * (sorted_Array[start] + sorted_Array[end]) / 2;
+            ans  = accumulate(sorted_Array.begin() + (l-1) , sorted_Array.begin() + (r-1) + 1 , 0LL);
 
         }
         solu[k++] = ans;
