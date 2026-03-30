@@ -6,8 +6,10 @@ int main()
     string s;
     cin >> s;
 
-    if(s.length() == 1){
-     cout << s; return 0;
+    if (s.length() == 1)
+    {
+        cout << s;
+        return 0;
     }
 
     for (int i = 0; i < s.length() - 2; i += 2)
