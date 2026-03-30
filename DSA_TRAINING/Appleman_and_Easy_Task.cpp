@@ -13,7 +13,7 @@ int main()
             cin >> a[i][j];
         }
     }
-    
+
     int count;
     for (int i = 0; i < n; i++)
     {
@@ -44,6 +44,7 @@ int main()
             }
         }
     }
+    
     cout << "YES";
     return 0;
 }
