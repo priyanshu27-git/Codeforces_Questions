@@ -10,7 +10,7 @@ int main()
     {
         cin >> a[i];
     }
-     bool isvisited[4];
+    bool isvisited[4];
     for (int i = 0; i < 4; i++)
     {
         isvisited[i] = false;

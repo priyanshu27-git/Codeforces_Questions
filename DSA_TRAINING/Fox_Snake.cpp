@@ -5,7 +5,6 @@ int main()
 {
     int n, m;
     cin >> n >> m;
-
     bool front = false;
     for (int i = 0; i < n; i++)
     {
