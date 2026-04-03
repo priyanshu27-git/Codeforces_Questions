@@ -29,8 +29,9 @@ int main()
                 else
                 {
                     cout << ".";
-                    if (j == m - 1)
+                    if (j == m - 1){
                         front = false;
+                    }
                 }
             }
             else
