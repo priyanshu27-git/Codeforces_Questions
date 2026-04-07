@@ -1,9 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
-#include <numeric>
 using namespace std;
-
 
 int main()
 {
@@ -21,27 +19,35 @@ int main()
         sorted_Array[i] = a[i];
     }
 
-    sort(sorted_Array.begin() , sorted_Array.end());
+    sort(sorted_Array.begin(), sorted_Array.end());
+
+    vector<long long> pref(n + 1, 0), prefSorted(n + 1, 0);
+
+    for (int i = 1; i <= n; i++)
+    {
+        pref[i] = pref[i - 1] + a[i - 1];
+        prefSorted[i] = prefSorted[i - 1] + sorted_Array[i - 1];
+    }
 
     int m;
     cin >> m;
     vector<long long> solu(m);
     long k = 0;
 
-    for (long i = 0; i < m; i++)
+    while (m--)
     {
         int type;
-        long l, r;
+        int l, r;
         cin >> type >> l >> r;
         long long ans = 0;
+
         if (type == 1)
         {
-            ans  = accumulate(a.begin() + (l-1) , a.begin() + (r-1) + 1 , 0LL);
+            ans = pref[r] - pref[l - 1];
         }
         else
         {
-            ans  = accumulate(sorted_Array.begin() + (l-1) , sorted_Array.begin() + (r-1) + 1 , 0LL);
-
+            ans = prefSorted[r] - prefSorted[l - 1];
         }
         solu[k++] = ans;
     }
