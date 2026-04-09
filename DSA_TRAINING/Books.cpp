@@ -11,17 +11,20 @@ int main() {
         cin >> a[i];
     }
     int count = 0;
+    int left = 0, right = 0;
+    int k = t;
+    int current = 0, max = 0;
     // for (int i = 0; i < n; i++)
     // {
     //     if(t >= a[i]){
     //         t -= a[i];
     //         count++;
     //     }
+    //     else {
+    //         current = count;
+    //         i -= 2;
+    //     }
     // }
-    
-    int left = 0, right = 0;
-    int k = t;
-    int current = 0, max = 0;
     while(right < n){
         if(k >= a[right]){
             count++;
@@ -42,5 +45,6 @@ int main() {
         }
     }
     cout << max;
+
     return 0;
 }
