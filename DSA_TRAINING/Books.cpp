@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int main()
+{
     int n;
     long long t;
     cin >> n >> t;
@@ -25,22 +26,27 @@ int main() {
     //         i -= 2;
     //     }
     // }
-    while(right < n){
-        if(k >= a[right]){
+    while (right < n)
+    {
+        if (k >= a[right])
+        {
             count++;
             k -= a[right];
             right++;
         }
-        else {
+        else
+        {
             right = left++;
             count = 0;
             k = t;
         }
         current = count;
-        if(max < current){
+        if (max < current)
+        {
             max = current;
         }
-        if(count == n){
+        if (count == n)
+        {
             break;
         }
     }
