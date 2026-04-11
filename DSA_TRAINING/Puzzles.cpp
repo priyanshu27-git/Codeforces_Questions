@@ -11,6 +11,7 @@ int main()
     {
         cin >> a[i];
     }
+    
     sort(a, a + m);
     int solu = 10000000, temp;
 
