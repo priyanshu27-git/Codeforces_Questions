@@ -10,6 +10,7 @@ int main()
     {
         cin >> a[i];
     }
+    
     int count = 0;
     int currentsum = 0, minimumsum = 0;
     int index = 1;
