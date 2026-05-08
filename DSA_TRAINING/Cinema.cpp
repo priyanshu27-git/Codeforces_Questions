@@ -8,7 +8,6 @@ int main()
     int weeks;
     int min_off;
     int max_off;
-
     if (n >= 7)
     {
         weeks = n / 7;
