@@ -32,6 +32,5 @@ int main()
     }
 
     cout << minimum_money;
-    
     return 0;
 }
