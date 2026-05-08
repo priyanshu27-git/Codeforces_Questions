@@ -30,6 +30,8 @@ int main()
         }
         a = k;
     }
+
     cout << minimum_money;
+    
     return 0;
 }
