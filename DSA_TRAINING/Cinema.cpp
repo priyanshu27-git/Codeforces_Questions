@@ -49,7 +49,9 @@ int main()
             min_off = 0;
             max_off = 2;
         }
+        
         cout << min_off << " " << max_off;
+
     }
     return 0;
 }
