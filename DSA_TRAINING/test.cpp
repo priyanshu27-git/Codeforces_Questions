@@ -35,25 +35,25 @@
 //     return 0;
 // }
 
-#include <iostream>
+// #include <iostream>
 
-using namespace std;
+// using namespace std;
 
-int main()
-{
-    int t;
-    cin >> t;
-    int solu[t];
-    int k =0 ;
-    while (t--)
-    {
-        int x;
-        cin >> x;
-        solu[k++] = x + 1;
-    }
-    for (int i = 0; i < k; i++)
-    {
-        cout << solu[i] << endl;
-    }
-    
-}
+// int main()
+// {
+//     int t;
+//     cin >> t;
+//     int solu[t];
+//     int k =0 ;
+//     while (t--)
+//     {
+//         int x;
+//         cin >> x;
+//         solu[k++] = x + 1;
+//     }
+//     for (int i = 0; i < k; i++)
+//     {
+//         cout << solu[i] << endl;
+//     }
+
+// }
