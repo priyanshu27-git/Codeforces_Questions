@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    string s;
+    string s; 
     cin >> s;
 
     int freq[26];
